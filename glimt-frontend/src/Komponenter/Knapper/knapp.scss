@@ -1,0 +1,73 @@
+@use '../../assets/farger.scss';
+@use '../../assets/fonter.scss';
+
+button {
+  background-color: farger.$primary;
+  color: farger.$white;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.6rem 1.2rem;
+  font-family: fonter.$font-body;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background-color: farger.$primary-hover;
+  }
+
+  &:focus-visible {
+    outline: 0.1875rem solid farger.$accent;
+    outline-offset: 0.1875rem;
+  }
+}
+
+.sekundær {
+  background-color: transparent;
+  color: farger.$primary;
+  border: 2px solid farger.$primary;
+  padding: 0.55rem 1.15rem;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    background-color: farger.$primary-hover;
+    color: farger.$white;
+    border-color: farger.$primary-hover;
+  }
+
+  &:focus-visible {
+    outline: 0.1875rem solid farger.$accent;
+    outline-offset: 0.1875rem;
+  }
+
+}
+
+.tertiær {
+  background-color: transparent;
+  color: farger.$secondary;
+  border: none;
+  padding: 0.6rem 1.2rem;
+
+  &:hover {
+    color: farger.$accent;
+    text-decoration: underline;
+    background-color: rgba(74, 124, 58, 0.1); // subtle tint of primary;
+  }
+
+  &:focus-visible {
+    outline: 0.1875rem solid farger.$accent;
+    outline-offset: 0.1875rem;
+  }
+
+}
+
+.liten {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+}
+
+.stor {
+  padding: 0.9rem 1.8rem;
+  font-size: 1.25rem;
+}
